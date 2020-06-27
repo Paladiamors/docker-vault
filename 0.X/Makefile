@@ -1,5 +1,5 @@
-REGISTRY_NAME?=docker.io/hashicorp
-VERSION=1.4.2
+REGISTRY_NAME?=paladiamors
+VERSION=1.4.2-hvac_0.10.4
 IMAGE_TAG_ENT=$(REGISTRY_NAME)/vault-enterprise:$(VERSION)_ent
 IMAGE_TAG_OSS=$(REGISTRY_NAME)/vault:$(VERSION)
 

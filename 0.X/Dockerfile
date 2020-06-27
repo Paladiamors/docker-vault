@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM python:3.8.3-alpine3.12
 
 # This is the release of Vault to pull in.
 ARG VAULT_VERSION=1.4.2
@@ -44,6 +44,9 @@ RUN set -eux; \
     gpgconf --kill gpg-agent && \
     apk del gnupg openssl && \
     rm -rf /root/.gnupg
+
+# Add hvac libraries
+RUN pip3 install hvac
 
 # /vault/logs is made available to use as a location to store audit logs, if
 # desired; /vault/file is made available to use as a location with the file
